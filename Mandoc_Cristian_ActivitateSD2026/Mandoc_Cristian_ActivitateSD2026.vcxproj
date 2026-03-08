@@ -124,6 +124,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="Laborator01.c" />
+    <ClCompile Include="Laborator02.c" />
     <ClCompile Include="LucruSupl1.c" />
     <ClCompile Include="Seminar01.c" />
     <ClCompile Include="Seminar03.c" />
