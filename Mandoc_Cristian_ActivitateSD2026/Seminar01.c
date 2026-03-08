@@ -1,13 +1,13 @@
-#include<stdio.h>
+//#include<stdio.h>
 
-int main()
+//int main()
 
-{
-	printf("Salutare!\n  Introduceti un numar intreg:");
-	int variabila = 0;
-	scanf_s("%d", &variabila);
-	printf("Ai introdus: %d", variabila); 
-	return 0;
+//{
+	//printf("Salutare!\n  Introduceti un numar intreg:");
+	//int variabila = 0;
+	//scanf_s("%d", &variabila);
+	//printf("Ai introdus: %d", variabila); 
+	//return 0;
 	//Citirea uneio variabile reale.
 
-}
+//}
