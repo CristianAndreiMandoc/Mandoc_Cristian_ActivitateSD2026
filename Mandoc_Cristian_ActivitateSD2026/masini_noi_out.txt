@@ -1,0 +1,5 @@
+Masini fabricate dupa anul 2015:
+
+2 Dacia Duster 2019 14200.00
+3 Ford Focus 2016 8900.00
+5 Hyundai Tucson 2021 22000.00

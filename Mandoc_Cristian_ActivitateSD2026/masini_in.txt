@@ -1,0 +1,5 @@
+1 Toyota Corolla 2012 5500.50
+2 Dacia Duster 2019 14200.00
+3 Ford Focus 2016 8900.00
+4 Volkswagen Golf 2010 4300.00
+5 Hyundai Tucson 2021 22000.00

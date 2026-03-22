@@ -30,5 +30,11 @@
     <ClCompile Include="Laborator02.c">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="LucruSupl02.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="LucruSupl3.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
