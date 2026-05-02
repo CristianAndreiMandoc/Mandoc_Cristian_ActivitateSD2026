@@ -45,5 +45,8 @@
     <ClCompile Include="LucruSupl6.c">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="LucurSupl07.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
