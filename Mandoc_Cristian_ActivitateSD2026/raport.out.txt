@@ -1,0 +1,28 @@
+=== REZULTATE SISTEM (Limbaj C) ===
+
+1. HASH TABLE (Cautare ID 108):
+Gasit: Georgescu_Mihai (100 puncte)
+-----------------------------------
+
+2. ARBORE BST (Alfabetic dupa nume):
+Nume: Dumitrescu_Elena | Punctaj: 88
+Nume: Georgescu_Mihai | Punctaj: 100
+Nume: Ionescu_Ana | Punctaj: 95
+Nume: Popescu_Ion | Punctaj: 85
+Nume: Vasilescu_Dan | Punctaj: 70
+-----------------------------------
+
+3. ARBORE AVL (Crescator dupa punctaj):
+Punctaj: 70 -> Vasilescu_Dan
+Punctaj: 85 -> Popescu_Ion
+Punctaj: 88 -> Dumitrescu_Elena
+Punctaj: 95 -> Ionescu_Ana
+Punctaj: 100 -> Georgescu_Mihai
+-----------------------------------
+
+4. MAX-HEAP (Top studenti):
+Locul 1: Georgescu_Mihai (100 pct)
+Locul 2: Ionescu_Ana (95 pct)
+Locul 3: Dumitrescu_Elena (88 pct)
+Locul 4: Popescu_Ion (85 pct)
+Locul 5: Vasilescu_Dan (70 pct)

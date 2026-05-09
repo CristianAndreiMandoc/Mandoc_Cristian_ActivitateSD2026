@@ -1,0 +1,5 @@
+101 Popescu_Ion 85
+105 Ionescu_Ana 95
+102 Vasilescu_Dan 70
+108 Georgescu_Mihai 100
+103 Dumitrescu_Elena 88
