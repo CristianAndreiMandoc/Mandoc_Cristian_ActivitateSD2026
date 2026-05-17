@@ -1,0 +1,8 @@
+---HashTable---
+ Gasit: Vasile (3100 RON)
+---Heap---
+ Georgescu -> 9500 RON
+ Ionescu -> 8200 RON
+ Dumitru -> 6400 RON
+ Popescu -> 4500 RON
+ Vasile -> 3100 RON

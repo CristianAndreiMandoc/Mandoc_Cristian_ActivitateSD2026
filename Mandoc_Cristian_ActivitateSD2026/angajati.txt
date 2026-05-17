@@ -1,0 +1,5 @@
+1001 Popescu 4500
+1005 Ionescu 8200
+1002 Vasile 3100
+1008 Georgescu 9500
+1003 Dumitru 6400

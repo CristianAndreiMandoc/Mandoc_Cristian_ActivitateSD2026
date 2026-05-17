@@ -51,5 +51,19 @@
     <ClCompile Include="Supl8.c">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="RecpitulareTest.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Rec.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="R.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="angajati.txt">
+      <Filter>Source Files</Filter>
+    </Text>
   </ItemGroup>
 </Project>

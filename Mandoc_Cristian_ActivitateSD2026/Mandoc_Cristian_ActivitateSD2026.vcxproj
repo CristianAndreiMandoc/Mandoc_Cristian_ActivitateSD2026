@@ -130,11 +130,17 @@
     <ClCompile Include="LucruSupl3.c" />
     <ClCompile Include="LucruSupl6.c" />
     <ClCompile Include="LucurSupl07.c" />
+    <ClCompile Include="R.c" />
+    <ClCompile Include="Rec.c" />
+    <ClCompile Include="RecpitulareTest.c" />
     <ClCompile Include="Seminar01.c" />
     <ClCompile Include="Seminar03.c" />
     <ClCompile Include="Supl4.c" />
     <ClCompile Include="Supl5.c" />
     <ClCompile Include="Supl8.c" />
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="angajati.txt" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
