@@ -1,0 +1,5 @@
+501 Trattoria 15000
+502 SushiBar 8500
+503 Steakhouse 22000
+504 FastFood 4000
+505 Pizzerie 12000

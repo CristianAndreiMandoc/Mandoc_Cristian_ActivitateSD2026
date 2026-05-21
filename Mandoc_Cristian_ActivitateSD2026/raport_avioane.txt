@@ -1,0 +1,9 @@
+--- CAUTARE IN HASH ---
+Gasit Hash: Boeing777 (Capacitate: 390 locuri)
+
+--- TOP AVIOANE (HEAP EXTRACTION) ---
+ AirbusA380 -> 800 locuri
+ Boeing777 -> 390 locuri
+ Boeing737 -> 180 locuri
+ AirbusA320 -> 150 locuri
+ Cessna -> 12 locuri

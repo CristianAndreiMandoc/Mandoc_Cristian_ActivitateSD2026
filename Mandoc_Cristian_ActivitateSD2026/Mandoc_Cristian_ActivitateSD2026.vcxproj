@@ -125,6 +125,8 @@
   <ItemGroup>
     <ClCompile Include="Laborator01.c" />
     <ClCompile Include="Laborator02.c" />
+    <ClCompile Include="Lucru.c" />
+    <ClCompile Include="Lucru13.c" />
     <ClCompile Include="LucruSupl02.c" />
     <ClCompile Include="LucruSupl1.c" />
     <ClCompile Include="LucruSupl3.c" />
@@ -141,6 +143,8 @@
   </ItemGroup>
   <ItemGroup>
     <Text Include="angajati.txt" />
+    <Text Include="avioane.txt" />
+    <Text Include="restaurantet.txt" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

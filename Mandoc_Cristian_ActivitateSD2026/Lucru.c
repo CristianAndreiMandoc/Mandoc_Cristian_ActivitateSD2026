@@ -1,27 +1,27 @@
-﻿//#define _CRT_SECURE_NO_WARNINGS
+//#define _CRT_SECURE_NO_WARNINGS
 //#include <stdio.h>
 //#include <stdlib.h>
 //#include <string.h>
 //
 //// ==========================================
-//// 0. DATELE (Am înlocuit Element cu Angajat)
+//// 0. DATELE (Entitatea Avion)
 //// ==========================================
 //typedef struct {
 //    int id;
-//    char nume[50];
-//    int salariu;
-//} Angajat;
+//    char model[50];
+//    int capacitate; // Numar de locuri (va fi folosit pentru salarii/incasari)
+//} Avion;
 //
 //// ==========================================
-//// 1. HASH TABLE (Căutare după ID)
+//// 1. HASH TABLE (Cautare rapida dupa ID)
 //// ==========================================
 //#define H_SIZE 10
 //typedef struct NodeH {
-//    Angajat info;
+//    Avion info;
 //    struct NodeH* next;
 //} NodeH;
 //
-//void insertHash(NodeH** ht, Angajat a) {
+//void insertHash(NodeH** ht, Avion a) {
 //    int p = a.id % H_SIZE;
 //    NodeH* nou = (NodeH*)malloc(sizeof(NodeH));
 //    nou->info = a;
@@ -33,45 +33,45 @@
 //    NodeH* temp = ht[id % H_SIZE];
 //    while (temp) {
 //        if (temp->info.id == id) {
-//            fprintf(fout, "Gasit Angajat in Hash: %s (Salariu: %d)\n", temp->info.nume, temp->info.salariu);
+//            fprintf(fout, "Gasit Avion in Hash: %s (Capacitate: %d locuri)\n", temp->info.model, temp->info.capacitate);
 //            return;
 //        }
 //        temp = temp->next;
 //    }
-//    fprintf(fout, "Angajatul nu a fost gasit.\n");
+//    fprintf(fout, "Avionul cu ID %d nu a fost gasit.\n", id);
 //}
 //
 //// ==========================================
-//// 2. MAX-HEAP (Cei mai bine plătiți angajați)
+//// 2. MAX-HEAP (Cele mai incapatatoare avioane)
 //// ==========================================
 //typedef struct {
-//    Angajat* arr;
+//    Avion* arr;
 //    int size;
 //} Heap;
 //
-//void insertHeap(Heap* h, Angajat a) {
+//void insertHeap(Heap* h, Avion a) {
 //    int i = h->size++;
 //    int p = (i - 1) / 2;
-//    Angajat aux;
+//    Avion aux;
 //    h->arr[i] = a;
 //
-//    // Comparăm salariile
-//    while (i > 0 && h->arr[i].salariu > h->arr[p].salariu) {
+//    // Comparam capacitatile (ca la salariu)
+//    while (i > 0 && h->arr[i].capacitate > h->arr[p].capacitate) {
 //        aux = h->arr[i]; h->arr[i] = h->arr[p]; h->arr[p] = aux;
 //        i = p; p = (i - 1) / 2;
 //    }
 //}
 //
-//Angajat extractHeap(Heap* h) {
-//    Angajat max = h->arr[0];
-//    Angajat aux;
+//Avion extractHeap(Heap* h) {
+//    Avion max = h->arr[0];
+//    Avion aux;
 //    int i = 0, st, dr, m_idx;
 //    h->arr[0] = h->arr[--h->size];
 //
 //    while (1) {
 //        st = 2 * i + 1; dr = 2 * i + 2; m_idx = i;
-//        if (st < h->size && h->arr[st].salariu > h->arr[m_idx].salariu) m_idx = st;
-//        if (dr < h->size && h->arr[dr].salariu > h->arr[m_idx].salariu) m_idx = dr;
+//        if (st < h->size && h->arr[st].capacitate > h->arr[m_idx].capacitate) m_idx = st;
+//        if (dr < h->size && h->arr[dr].capacitate > h->arr[m_idx].capacitate) m_idx = dr;
 //        if (m_idx == i) break;
 //
 //        aux = h->arr[i]; h->arr[i] = h->arr[m_idx]; h->arr[m_idx] = aux;
@@ -81,40 +81,40 @@
 //}
 //
 //// ==========================================
-//// 3. BST (Ordonat alfabetic după nume)
+//// 3. BST (Ordonat alfabetic dupa Model)
 //// ==========================================
 //typedef struct NodeB {
-//    Angajat info;
+//    Avion info;
 //    struct NodeB* left, * right;
 //} NodeB;
 //
-//NodeB* insertBST(NodeB* root, Angajat a) {
+//NodeB* insertBST(NodeB* root, Avion a) {
 //    if (!root) {
 //        NodeB* nou = (NodeB*)malloc(sizeof(NodeB));
 //        nou->info = a; nou->left = nou->right = NULL;
 //        return nou;
 //    }
-//    // Ordonăm după nume folosind strcmp
-//    if (strcmp(a.nume, root->info.nume) < 0) root->left = insertBST(root->left, a);
-//    else if (strcmp(a.nume, root->info.nume) > 0) root->right = insertBST(root->right, a);
+//    // Ordonam dupa nume (model) folosind strcmp
+//    if (strcmp(a.model, root->info.model) < 0) root->left = insertBST(root->left, a);
+//    else if (strcmp(a.model, root->info.model) > 0) root->right = insertBST(root->right, a);
 //    return root;
 //}
 //
-//void printBSTConditionat(NodeB* root, int prag_salariu, FILE* fout) {
+//void printBSTConditionat(NodeB* root, int prag_capacitate, FILE* fout) {
 //    if (root) {
-//        printBSTConditionat(root->left, prag_salariu, fout);
-//        if (root->info.salariu > prag_salariu) {
-//            fprintf(fout, "Salariu mare (>%d): %s\n", prag_salariu, root->info.nume);
+//        printBSTConditionat(root->left, prag_capacitate, fout);
+//        if (root->info.capacitate > prag_capacitate) {
+//            fprintf(fout, "Capacitate mare (>%d): %s\n", prag_capacitate, root->info.model);
 //        }
-//        printBSTConditionat(root->right, prag_salariu, fout);
+//        printBSTConditionat(root->right, prag_capacitate, fout);
 //    }
 //}
 //
 //// ==========================================
-//// 4. AVL (Ordonat după salariu)
+//// 4. AVL (Ordonat dupa Capacitate)
 //// ==========================================
 //typedef struct NodeAVL {
-//    Angajat info;
+//    Avion info;
 //    struct NodeAVL* left, * right;
 //    int ht;
 //} NodeAVL;
@@ -137,7 +137,7 @@
 //    return y;
 //}
 //
-//NodeAVL* insertAVL(NodeAVL* root, Angajat a) {
+//NodeAVL* insertAVL(NodeAVL* root, Avion a) {
 //    int bal;
 //    if (!root) {
 //        NodeAVL* nou = (NodeAVL*)malloc(sizeof(NodeAVL));
@@ -145,18 +145,18 @@
 //        return nou;
 //    }
 //
-//    // Inserăm după salariu
-//    if (a.salariu < root->info.salariu) root->left = insertAVL(root->left, a);
-//    else if (a.salariu > root->info.salariu) root->right = insertAVL(root->right, a);
+//    // Inseram dupa capacitate
+//    if (a.capacitate < root->info.capacitate) root->left = insertAVL(root->left, a);
+//    else if (a.capacitate > root->info.capacitate) root->right = insertAVL(root->right, a);
 //    else return root;
 //
 //    root->ht = 1 + maxV(getH(root->left), getH(root->right));
 //    bal = getBal(root);
 //
-//    if (bal > 1 && a.salariu < root->left->info.salariu) return rotD(root);
-//    if (bal < -1 && a.salariu > root->right->info.salariu) return rotS(root);
-//    if (bal > 1 && a.salariu > root->left->info.salariu) { root->left = rotS(root->left); return rotD(root); }
-//    if (bal < -1 && a.salariu < root->right->info.salariu) { root->right = rotD(root->right); return rotS(root); }
+//    if (bal > 1 && a.capacitate < root->left->info.capacitate) return rotD(root);
+//    if (bal < -1 && a.capacitate > root->right->info.capacitate) return rotS(root);
+//    if (bal > 1 && a.capacitate > root->left->info.capacitate) { root->left = rotS(root->left); return rotD(root); }
+//    if (bal < -1 && a.capacitate < root->right->info.capacitate) { root->right = rotD(root->right); return rotS(root); }
 //
 //    return root;
 //}
@@ -164,7 +164,7 @@
 //void printAVL(NodeAVL* root, FILE* fout) {
 //    if (root) {
 //        printAVL(root->left, fout);
-//        fprintf(fout, "AVL Salariu: %d RON -> %s\n", root->info.salariu, root->info.nume);
+//        fprintf(fout, "AVL Capacitate: %d locuri -> %s\n", root->info.capacitate, root->info.model);
 //        printAVL(root->right, fout);
 //    }
 //}
@@ -173,48 +173,49 @@
 //// 5. MAIN
 //// ==========================================
 //int main() {
-//    FILE* fin = fopen("angajati.txt", "r");
+//    FILE* fin = fopen("avioane.txt", "r");
 //    FILE* fout = fopen("raport.out.txt", "w");
-//    Angajat a;
+//    Avion a;
 //
 //    NodeH* ht[H_SIZE] = { NULL };
-//    Heap hp; hp.size = 0; hp.arr = (Angajat*)malloc(100 * sizeof(Angajat));
+//    Heap hp; hp.size = 0; hp.arr = (Avion*)malloc(100 * sizeof(Avion));
 //    NodeB* bst = NULL;
 //    NodeAVL* avl = NULL;
 //
 //    if (!fin || !fout) return 1;
 //
-//    // Citim angajații
-//    while (fscanf(fin, "%d %49s %d", &a.id, a.nume, &a.salariu) == 3) {
+//    // Citim avioanele
+//    while (fscanf(fin, "%d %49s %d", &a.id, a.model, &a.capacitate) == 3) {
 //        insertHash(ht, a);
 //        insertHeap(&hp, a);
 //        bst = insertBST(bst, a);
 //        avl = insertAVL(avl, a);
 //    }
 //
-//    fprintf(fout, "=== RAPORT ANGAJATI ===\n\n");
+//    fprintf(fout, "=== RAPORT AVIOANE ===\n\n");
 //
 //    // Test HashTable
-//    searchHash(ht, 1008, fout);
+//    searchHash(ht, 102, fout); // Inlocuieste 102 cu un ID pe care il pui tu in fisier
 //
 //    // Test BST conditionat
-//    fprintf(fout, "\n-- Angajati cu salariu > 5000 (din BST) --\n");
-//    printBSTConditionat(bst, 5000, fout);
+//    fprintf(fout, "\n-- Avioane cu capacitate > 200 (din BST) --\n");
+//    printBSTConditionat(bst, 200, fout);
 //
 //    // Test AVL
-//    fprintf(fout, "\n-- Toti Angajatii ordonati dupa salariu (din AVL) --\n");
+//    fprintf(fout, "\n-- Toate Avioanele ordonate dupa capacitate (din AVL) --\n");
 //    printAVL(avl, fout);
 //
 //    // Test Extragere Heap
-//    fprintf(fout, "\n-- Top 3 Salarii (Extrase din Heap) --\n");
+//    fprintf(fout, "\n-- Top 3 Cele mai mari avioane (Extrase din Heap) --\n");
 //    for (int i = 0; i < 3 && hp.size > 0; i++) {
 //        a = extractHeap(&hp);
-//        fprintf(fout, "Locul %d: %s (%d RON)\n", i + 1, a.nume, a.salariu);
+//        fprintf(fout, "Locul %d: %s (%d locuri)\n", i + 1, a.model, a.capacitate);
 //    }
 //
 //    fclose(fin);
 //    fclose(fout);
 //    free(hp.arr);
 //
+//    printf("Toate structurile au rulat perfect! Verifica raport.out.txt\n");
 //    return 0;
 //}

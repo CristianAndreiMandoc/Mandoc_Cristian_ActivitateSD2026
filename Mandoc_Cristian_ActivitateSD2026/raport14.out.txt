@@ -1,0 +1,20 @@
+=== RAPORT RESTAURANTE ===
+
+Gasit Restaurant in Hash: Steakhouse (Incasari: 22000 RON)
+
+-- Restaurante cu incasari > 10000 (din BST) --
+Incasari mari (>10000): Pizzerie
+Incasari mari (>10000): Steakhouse
+Incasari mari (>10000): Trattoria
+
+-- Toate Restaurantele ordonate dupa incasari (din AVL) --
+AVL Incasari: 4000 RON -> FastFood
+AVL Incasari: 8500 RON -> SushiBar
+AVL Incasari: 12000 RON -> Pizzerie
+AVL Incasari: 15000 RON -> Trattoria
+AVL Incasari: 22000 RON -> Steakhouse
+
+-- Top 3 Cele mai profitabile restaurante (Extrase din Heap) --
+Locul 1: Steakhouse (22000 RON)
+Locul 2: Trattoria (15000 RON)
+Locul 3: Pizzerie (12000 RON)

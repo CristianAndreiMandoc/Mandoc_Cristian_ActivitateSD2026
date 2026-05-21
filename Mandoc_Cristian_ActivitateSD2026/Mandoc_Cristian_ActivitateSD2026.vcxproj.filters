@@ -60,9 +60,21 @@
     <ClCompile Include="R.c">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="Lucru.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Lucru13.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Text Include="angajati.txt">
+      <Filter>Source Files</Filter>
+    </Text>
+    <Text Include="avioane.txt">
+      <Filter>Source Files</Filter>
+    </Text>
+    <Text Include="restaurantet.txt">
       <Filter>Source Files</Filter>
     </Text>
   </ItemGroup>
