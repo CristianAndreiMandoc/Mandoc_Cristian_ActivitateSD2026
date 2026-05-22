@@ -1,0 +1,20 @@
+=== RAPORT BIBLIOTECA ===
+
+Gasit Carte in Hash: Morometii (800 pagini)
+
+-- Carti cu peste 300 de pagini (din BST) --
+Carte mare (>300 pagini): Ion (400 pagini)
+Carte mare (>300 pagini): Maitreyi (350 pagini)
+Carte mare (>300 pagini): Morometii (800 pagini)
+
+-- Toate Cartile ordonate crescator dupa Nr. Pagini (din AVL) --
+AVL Volum: 120 pagini -> HarapAlb
+AVL Volum: 250 pagini -> Baltagul
+AVL Volum: 350 pagini -> Maitreyi
+AVL Volum: 400 pagini -> Ion
+AVL Volum: 800 pagini -> Morometii
+
+-- Top 3 Cele mai groase carti (Extrase din Heap) --
+Locul 1: Morometii (800 pagini)
+Locul 2: Ion (400 pagini)
+Locul 3: Maitreyi (350 pagini)

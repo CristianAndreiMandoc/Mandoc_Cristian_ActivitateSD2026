@@ -66,6 +66,9 @@
     <ClCompile Include="Lucru13.c">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="Carte.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Text Include="angajati.txt">
@@ -75,6 +78,9 @@
       <Filter>Source Files</Filter>
     </Text>
     <Text Include="restaurantet.txt">
+      <Filter>Source Files</Filter>
+    </Text>
+    <Text Include="carti.txt">
       <Filter>Source Files</Filter>
     </Text>
   </ItemGroup>

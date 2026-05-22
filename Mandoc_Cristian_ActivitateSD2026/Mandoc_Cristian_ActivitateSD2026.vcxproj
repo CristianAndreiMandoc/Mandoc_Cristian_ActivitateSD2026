@@ -123,6 +123,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="Carte.c" />
     <ClCompile Include="Laborator01.c" />
     <ClCompile Include="Laborator02.c" />
     <ClCompile Include="Lucru.c" />
@@ -144,6 +145,7 @@
   <ItemGroup>
     <Text Include="angajati.txt" />
     <Text Include="avioane.txt" />
+    <Text Include="carti.txt" />
     <Text Include="restaurantet.txt" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
